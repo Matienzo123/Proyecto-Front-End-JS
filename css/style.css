@@ -1,0 +1,339 @@
+/* --------------------------------------------------------------------------------------------------- */
+/*                          Body                                                                      * /
+/* --------------------------------------------------------------------------------------------------- */
+
+/*          Reseteo de css              */
+
+* {
+    margin: 0; /* Quita los margenes */
+    padding: 0; /* Quita los paddings */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto de los elementos */
+    
+}
+
+html {
+    /* Sin congiguracion el rem vale: */
+    /* 1rem = 16px */
+
+    /* Para que 1 rem = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem; /* 16px */
+    background-color: rgb(13, 13, 13);
+    color: white;
+
+    /* Hacemos flexibles (formato columna) al Header-Main-Footer */
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh; /* Altura minima de la ventana */
+}
+
+.header {
+    background-color: black;
+
+    display: flex; /* Usamos flexbox para el header (formato linea)*/
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centrado vertical */ 
+    border-bottom: 1px solid rgb(54, 54, 54); /* Linea inferior */
+}
+
+.header-logo {
+    display: flex; /* Usamos flexbox para el logo y el texto (formato linea) */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}   
+
+.header-logo img{
+    width: 4rem; /* Ancho de la imagen */
+    height: auto; /* La altura se ajusta automáticamente */
+    margin-left: 1.5rem; /* Espaciado interno */
+}
+
+.header-logo a {
+    font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
+    font-size: 4rem; /* 40px */
+    text-decoration: none; /* Quita el subrayado */
+    color: white; 
+    margin-left: 1.5rem; /* Margen izquierdo */
+}
+
+.header nav {
+    padding: 1rem; /* Espaciado interno */
+    margin-right: 2rem; /* Margen derecho */
+}
+
+.header nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    
+    display: flex; /* Usamos flexbox para el menu (formato linea) */
+    justify-content: center;
+    gap: 1rem;
+}   
+
+.header-nav li {    
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-nav a {
+    text-decoration: none; /* Quita el subrayado */
+    color: white; /* Color del texto */
+    display: inline-block; /* Para que el padding afecte al enlace */
+    padding: 1rem;
+}   
+
+.footer {
+    background-color: black;
+
+    padding: 1.5rem;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    border-top: 1px solid rgb(54, 54, 54);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+}
+
+.footer div a {
+    color: white;
+    margin-right: 2rem;
+    gap: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+/*                          Home                                                                      * /
+/* --------------------------------------------------------------------------------------------------- */
+
+main {
+    width: 100%; /* Ancho del main */
+    flex: 1; /* Ocupa todo el espacio disponible */
+    margin: 2rem auto; /* Centrado horizontal y margen vertical */
+    display: flex; /* Hacemos flexibles (formato columna) al main */
+    flex-direction: column; /* Formato columna */
+    align-items: center; /* Centrado horizontal */
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+.home {
+    width: 80%; /* Ancho del contenedor home */
+}
+
+.home h1 {
+    font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
+    text-align: center; /* Centrado del texto */
+    font-size: 4rem; /* 50px */
+    margin: 3rem 0; /* Margen arriba y abajo */
+}  
+
+.contenedor-home {
+    width: 100%; /* Ancho del contenedor home */
+    /* margin: 0 auto; /* Centrado horizontal */
+}
+
+.portada-home {
+    width: 90%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* La altura se ajusta automáticamente */
+    object-fit: cover; /* La imagen cubre todo el contenedor sin distorsionarse */
+}
+
+.tarjeta-home p {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente Arial */
+    font-size: 1.5rem; /* Tamaño del texto */
+    width: 90%; /* Ancho del texto */   
+    padding: 2rem 2rem 4rem 2rem; /* Espaciado interno */
+    margin: auto;
+}   
+
+.video-youtube {
+    padding: 2rem;
+    border-top: 0.5px solid rgb(54, 54, 54);
+    border-bottom: 0.5px solid rgb(54, 54, 54);
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------- */
+
+.productos-home {
+    width: 100%; /* Ancho del contenedor de productos */
+}
+
+.productos-home h2 {
+    font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
+    text-align: center; /* Centrado del texto */
+    font-size: 4rem; /* 40px */    
+    margin: 3rem 0; /* Margen arriba y abajo */
+}
+
+.contenedor-productos {
+    display: flex; /* Usamos flexbox para el contenedor de productos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
+    gap: 2rem; /* Espacio entre los elementos */
+    margin: 2rem; /* Margen alrededor del contenedor */
+}
+
+.tarjeta-producto {
+    background-color: black; /* Color de fondo de las tarjetas */
+    border-radius: 1.5rem; /* Bordes redondeados */
+    padding: 1.5rem; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    width: 30rem; /* Ancho fijo para las tarjetas */
+    
+    display: flex; /* Usamos flexbox para las tarjetas de producto */
+    flex-direction: column; /* Formato columna */
+    align-items: center; /* Centrado horizontal */
+    gap: 1.5rem; /* Espacio entre los elementos */
+}
+
+.tarjeta-producto img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* La altura se ajusta automáticamente */
+}
+
+.tarjeta-producto h3 {
+    font-size: 2rem; /* Tamaño del título */
+}   
+
+.tarjeta-producto p {
+    font-size: 1.5rem; /* Tamaño del precio */
+    font-weight: bold; /* Negrita */
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+.aside {
+    padding: 2rem; /* Espaciado interno */
+    margin: 2rem auto; /* Centrado horizontal y margen vertical */
+    width: 90%; /* Ancho del aside */
+    text-align: center; /* Centrado del texto */
+}
+
+.aside h2 {
+    font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
+    text-align: center; /* Centrado del texto */
+    font-size: 4rem; /* 40px */    
+    margin: 3rem 0; /* Margen arriba y abajo */
+}
+
+.aside p {
+    font-size: 1.8rem; /* Tamaño del texto */
+    margin: 2rem auto; /* Margen arriba y abajo, centrado horizontal */
+    width: 80%; /* Ancho del texto */
+}
+
+.aside img {
+    padding-bottom: 2rem;
+}
+
+.audio {
+    padding: 1rem;
+    border-top: 0.5px solid rgb(54, 54, 54);
+    border-bottom: 0.5px solid rgb(54, 54, 54);
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+/*                          Contacto                                                                  * /
+/* --------------------------------------------------------------------------------------------------- */
+
+.section-contacto h1 {
+    font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
+    font-size: 4rem; /* 30px */
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.section-contacto p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 2rem auto; 
+    padding: 0 2rem;
+
+    width: 70%;
+}   
+
+.formulario {
+    max-width: 600px;
+    margin: 0 auto; /* Centrar el formulario */
+    background-color: rgb(30, 30, 30);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.campo-form label {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.campo-form input,
+.campo-form textarea {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.formulario button {
+    width: 100%;
+    font-size: 2rem;
+    font-style: bold;
+    background-color: #cb8719;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+/*                          Queries                                                                   * /
+/* --------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    .home h1 {
+        font-size: 3.5rem;
+    }
+
+    .tarjeta-home p {
+        font-size: 1.2rem;
+    }
+
+    iframe {
+        width: 80%;
+        height: auto;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+

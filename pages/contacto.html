@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Red Dead Redemption">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título -->
+    <title>Contacto RDR Games</title>
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../css/style.css">
+       <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+    <!-- Enlace a Font Awesome desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Enlace a Chinese Rocks desde CDN -->
+    <link href="https://fonts.cdnfonts.com/css/chinese-rocks" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <img src="../img/mando-retro-blanco.png" alt="Joystick retro">               
+            <a href="./index.html">RDR Games</a>     
+        </div>       
+        <nav class="header-nav">            
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../index.html">JUEGOS</a></li>
+                <li><a href="../index.html">NOSOTROS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="section-contacto">
+
+            <h1>Contacto</h1>        
+            <p>Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto con nosotros, no dudes en enviarnos un mensaje a través del siguiente formulario. Estaremos encantados de ayudarte.</p>
+        
+            <form class="formulario" action="https://formspree.io/f/xldpgpgy" method="POST">
+
+                <div class="campo-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="email"> Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" cols="50" required></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="Nuevo mensaje recibido desde el sitio RDR Games Page.">
+
+                <button type="submit">ENVIAR</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 RDR Games. Todos los derechos reservados.</p>
+        <div>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+    
+</body>
+</html>
