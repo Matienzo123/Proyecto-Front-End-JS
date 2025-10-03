@@ -12,17 +12,14 @@
 }
 
 html {
-    /* Sin congiguracion el rem vale: */
-    /* 1rem = 16px */
-
-    /* Para que 1 rem = 10px */
-    font-size: 62.5%;
+    /* Sin congiguracion el rem vale: 1rem = 16px */    
+    font-size: 62.5%; /* Para que 1 rem = 10px */
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* formato letra genral para todo el body */
     font-size: 1.6rem; /* 16px */
-    background-color: rgb(13, 13, 13);
+    background-color: rgb(13, 13, 13); 
     color: white;
 
     /* Hacemos flexibles (formato columna) al Header-Main-Footer */
@@ -33,7 +30,7 @@ body {
 }
 
 .header {
-    background-color: black;
+    background-color: black; /* Color fondo */
 
     display: flex; /* Usamos flexbox para el header (formato linea)*/
     justify-content: space-between; /* Espacio entre los elementos */
@@ -57,7 +54,7 @@ body {
     font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
     font-size: 4rem; /* 40px */
     text-decoration: none; /* Quita el subrayado */
-    color: white; 
+    color: white; /* Color del texto */
     margin-left: 1.5rem; /* Margen izquierdo */
 }
 
@@ -67,41 +64,40 @@ body {
 }
 
 .header nav ul {
-    list-style: none; /* Quita los puntos de la lista */
-    
+    list-style: none; /* Quita los puntos de la lista */    
     display: flex; /* Usamos flexbox para el menu (formato linea) */
-    justify-content: center;
-    gap: 1rem;
+    justify-content: center; /* Centrado horizontal */
+    gap: 1rem; /* Espacio entre los elementos */ 
 }   
 
 .header-nav li {    
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.5rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto Negrita */
 }
 
 .header-nav a {
     text-decoration: none; /* Quita el subrayado */
     color: white; /* Color del texto */
     display: inline-block; /* Para que el padding afecte al enlace */
-    padding: 1rem;
+    padding: 1rem; 
 }   
 
 .footer {
-    background-color: black;
+    background-color: black; /* Color fondo */
 
-    padding: 1.5rem;
+    padding: 1.5rem; /* Relleno interno */
     margin-top: auto; /* Empuja el footer hacia abajo */
-    border-top: 1px solid rgb(54, 54, 54);
+    border-top: 1px solid rgb(54, 54, 54); /* Linea superior */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Usamos flexbox para el footer(formato linea)*/
+    justify-content: space-between; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
 }
 
 .footer p {
-    font-size: 1.4rem;
-    margin-left: 2rem;
-}
+    font-size: 1.4rem; 
+    margin-left: 2rem; 
+ }
 
 .footer div a {
     color: white;
@@ -251,7 +247,7 @@ main {
 .section-contacto h1 {
     font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
     font-size: 4rem; /* 30px */
-    text-align: center;
+    text-align: center; 
     margin: 2rem 0;
 }
 
@@ -309,8 +305,8 @@ main {
 
 @media (max-width: 768px) {
 
-    .header {
-        display: flex;
+    .header { 
+        display: flex; /* Flex en formato column para los elementos dentro del headear*/
         flex-direction: column;
         margin: 1rem 0;
     }
@@ -324,12 +320,12 @@ main {
     }
 
     iframe {
-        width: 80%;
+        width: 80%; 
         height: auto;
     }
 
     .footer {
-        display: flex;
+        display: flex; /* Flex en formato column para los elementos dentro del footer*/
         flex-direction: column;
     }
 
