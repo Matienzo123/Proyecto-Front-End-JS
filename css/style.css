@@ -129,7 +129,7 @@ main {
 .home h1 {
     font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
     text-align: center; /* Centrado del texto */
-    font-size: 4rem; /* 50px */
+    font-size: 4.5rem; /* 45px */
     margin: 3rem 0; /* Margen arriba y abajo */
 }  
 
@@ -139,23 +139,34 @@ main {
 }
 
 .portada-home {
-    width: 90%; /* La imagen ocupa todo el ancho del contenedor */
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
     height: auto; /* La altura se ajusta automáticamente */
     object-fit: cover; /* La imagen cubre todo el contenedor sin distorsionarse */
+    border-radius: 1.5rem; /* Bordes redondeados */
 }
 
 .tarjeta-home p {
     font-family: Arial, Helvetica, sans-serif; /* Fuente Arial */
-    font-size: 1.5rem; /* Tamaño del texto */
-    width: 90%; /* Ancho del texto */   
-    padding: 2rem 2rem 4rem 2rem; /* Espaciado interno */
-    margin: auto;
+    font-size: 1.75rem; /* Tamaño del texto */
+    width: 95%; /* Ancho del texto */   
+    padding: 2rem 2rem 5rem 2rem; /* Espaciado interno */
+    margin: auto; /* Centrado horizontal */
+    text-align: center; /* Centrado del texto */
 }   
 
 .video-youtube {
-    padding: 2rem;
-    border-top: 0.5px solid rgb(54, 54, 54);
-    border-bottom: 0.5px solid rgb(54, 54, 54);
+    padding: 2rem; /* Espaciado interno */
+    border-top: 0.5px solid rgb(54, 54, 54); /* Linea superior */
+    border-bottom: 0.5px solid rgb(54, 54, 54); /* Linea inferior */
+    margin: 2rem auto; /* Centrado horizontal y margen vertical */
+}
+
+iframe {
+    width: 80%; /* Ancho del iframe */
+    height: 45rem; /* Altura del iframe */
+    margin: 2rem auto; /* Centrado horizontal y margen vertical */
+    display: block; /* Para que el margin auto funcione */
+    border-radius: 1.5rem; /* Bordes redondeados */
 }
 
 
@@ -225,7 +236,7 @@ main {
 }
 
 .aside p {
-    font-size: 1.8rem; /* Tamaño del texto */
+    font-size: 1.75rem; /* Tamaño del texto */
     margin: 2rem auto; /* Margen arriba y abajo, centrado horizontal */
     width: 80%; /* Ancho del texto */
 }
@@ -300,13 +311,46 @@ main {
 }
 
 /* --------------------------------------------------------------------------------------------------- */
+/*                          Carrito                                                                   * /
+/* --------------------------------------------------------------------------------------------------- */
+
+.h1-carrito {
+    font-family: 'Chinese Rocks Rg', sans-serif; /* Fuente personalizada */
+    font-size: 4rem; /* 40px */
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.contenedeor-carrito {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}   
+.tarjeta-carrito {
+    background-color: black; /* Color de fondo de las tarjetas */
+    border-radius: 1.5rem; /* Bordes redondeados */
+    padding: 1.5rem; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    width: 30rem; /* Ancho fijo para las tarjetas */
+    
+    display: flex; /* Usamos flexbox para las tarjetas de producto */
+    flex-direction: column; /* Formato columna */
+    align-items: center; /* Centrado horizontal */
+    gap: 1.5rem; /* Espacio entre los elementos */
+}
+
+/* --------------------------------------------------------------------------------------------------- */
 /*                          Queries                                                                   * /
 /* --------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 768px) {
 
-    .header { 
-        display: flex; /* Flex en formato column para los elementos dentro del headear*/
+    .header {
+        display: flex;
         flex-direction: column;
         margin: 1rem 0;
     }
@@ -316,20 +360,30 @@ main {
     }
 
     .tarjeta-home p {
-        font-size: 1.2rem;
+        font-size: inherit;
     }
 
     iframe {
-        width: 80%; 
+        width: 60%;
         height: auto;
+        margin: 0 20%;
+    }
+
+    .aside p {
+        width: 100%;
+        font-size: inherit;
     }
 
     .footer {
-        display: flex; /* Flex en formato column para los elementos dentro del footer*/
+        display: flex;
         flex-direction: column;
     }
 
 }
+
+/* --------------------------------------------------------------------------------------------------- */
+
+
 
 /* --------------------------------------------------------------------------------------------------- */
 

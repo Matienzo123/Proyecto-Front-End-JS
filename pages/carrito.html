@@ -6,7 +6,7 @@
     <meta name="author" content="Red Dead Redemption">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título -->
-    <title>Contacto RDR Games</title>
+    <title>CarritoRDR Games</title>
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="../css/style.css">
        <!-- Google Fonts -->
@@ -18,7 +18,6 @@
 
 </head>
 <body>
-    
     <header class="header">
         <div class="header-logo">
             <img src="../img/mando-retro-blanco.png" alt="Joystick retro">               
@@ -36,36 +35,20 @@
     </header>
 
     <main>
+        <h1 class="h1-carrito">Carrito de Compras</h1>
 
-        <section class="section-contacto">
-
-            <h1>Contacto</h1>        
-            <p>Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto con nosotros, no dudes en enviarnos un mensaje a través del siguiente formulario. Estaremos encantados de ayudarte.</p>
-        
-            <form class="formulario" action="https://formspree.io/f/xldpgpgy" method="POST">
-
-                <div class="campo-form">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="campo-form">
-                    <label for="email"> Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="campo-form">
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="5" cols="50" required></textarea>
-                </div>
-
-                <input type="hidden" name="_subject" value="Nuevo mensaje recibido desde el sitio RDR Games Page.">
-
-                <button type="submit">ENVIAR</button>
-
-            </form>
-
+        <section id="contenedor-carrito" class="contenedeor-carrito">
+            <!-- Aquí se mostrarán los productos añadidos al carrito -->
         </section>
+
+        <div id="acciones-carrito">
+           <!-- Aquí van las acciones del carrito como vaciar carrito o finalizar compra -->         
+        </div>
+
+        <section id="resumen-carrito">
+            <!-- Aquí se mostrará el resumen del carrito -->
+        </section>
+
 
     </main>
 
@@ -77,6 +60,8 @@
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
+
+    <script type="module" src="../js/carrito.js"></script>
     
 </body>
 </html>
