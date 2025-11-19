@@ -78,6 +78,18 @@ const  renderizarCarrito = () => {
 
     divAcciones.appendChild(botonVaciar);
 
+    // Botón para Finalizar Compra
+    const botonFinalizar = document.createElement('button');
+    botonFinalizar.classList.add('btn');
+    botonFinalizar.classList.add('btn-finalizar-compra');
+    botonFinalizar.textContent = 'Finalizar Compra';
+    botonFinalizar.type = 'button';
+    botonFinalizar.addEventListener('click', () => {
+        mostrarMensaje('Funcionalidad a desarrollar más adelante');
+    });
+
+    divAcciones.appendChild(botonFinalizar);
+
     // Renderizar resumen (total) del carrito 
     const resumen = document.createElement('p');
     resumen.classList.add('resumen-carrito');
