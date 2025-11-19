@@ -208,6 +208,8 @@ iframe {
 .tarjeta-producto img {
     width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
     height: auto; /* La altura se ajusta automáticamente */
+    flex: 1; /* La imagen ocupa todo el espacio disponible */
+    object-fit: cover; /* La imagen cubre todo el contenedor sin distorsionarse */
 }
 
 .tarjeta-producto h3 {
@@ -311,7 +313,7 @@ iframe {
 }
 
 /* --------------------------------------------------------------------------------------------------- */
-/*                          Carrito                                                                   */
+/*                          Carrito                                                                    */
 /* --------------------------------------------------------------------------------------------------- */
 
 .h1-carrito {
@@ -343,6 +345,12 @@ iframe {
     align-items: center; /* Centrado horizontal */
     gap: 1.5rem; /* Espacio entre los elementos */
 }
+
+.resumen-carrito {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}   
 
 /* --------------------------------------------------------------------------------------------------- */
 /*                          Queries                                                                   * /

@@ -11,10 +11,14 @@ const  renderizarCarrito = () => {
     const contenedorCarrito = document.getElementById('contenedor-carrito');
     // Botones de acciones del carrito
     const divAcciones = document.getElementById('acciones-carrito');
+    // Resumen del carrito
+    const divResumen = document.getElementById('resumen-carrito');
+
 
     // Limpiar contenedores antes de renderizar
     contenedorCarrito.innerHTML = '';
     divAcciones.innerHTML = '';
+    divResumen.innerHTML = '';
 
     // Mostrar mensaje si el carrito está vacío
     if (carrito.length === 0) {
@@ -74,14 +78,17 @@ const  renderizarCarrito = () => {
 
     divAcciones.appendChild(botonVaciar);
 
-    // Renderizar resumen (total)
-    const resumen = document.getElementById('resumen-carrito');
+    // Renderizar resumen (total) del carrito 
+    const resumen = document.createElement('p');
     resumen.classList.add('resumen-carrito');
-    if (resumen) {
-        const total = carrito.reduce((acc, p) => acc + (Number(p.precio) || 0), 0);
-        const formatter = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'USD' });
-        resumen.innerHTML = `<p class="resumen-total">Total: ${formatter.format(total)}</p>`;
-    }
+    let total = 0;
+    for (const producto of carrito) {
+        total += Number(producto.precio) || 0;        
+    }   
+    resumen.textContent = `Total a pagar: U$S ${total.toFixed(2)}`;
+
+    divResumen.appendChild(resumen);
+
 };
 
 document.addEventListener('DOMContentLoaded', renderizarCarrito);
