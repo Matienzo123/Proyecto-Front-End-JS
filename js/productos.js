@@ -1,11 +1,11 @@
 //Ruta de productos absoluta: js/productos.js 
 export const productos = [
     
-    { "id": "1",  "nombre": "Red Dead Revolver", "precio": 9.99, "img": "img/RD Revolver-1.jpg" },
-    { "id": "2",  "nombre": "Red Dead Redemption Game of the Years Edition", "precio": 49.99, "img": "img/RDR UNDEAD NIGHTMARE.jpg" },
-    { "id": "3",  "nombre": "Red Dead Redemption", "precio": 39.99, "img": "img/RDR.jpg" },
-    { "id": "4",  "nombre": "Red Dead Redemption Undead Nightmare (Extention)", "precio": 19.99, "img": "img/UNDEAD NIGHTMARE.jpg" },
-    { "id": "5",  "nombre": "Red Dead Redemption II Ultimate Edition", "precio": 99.99, "img": "img/RDR2 ULTIMATE EDITION.jpg" },
-    { "id": "6",  "nombre": "Red Dead Redemption II", "precio": 59.99, "img": "img/RDR2.jpg" },
-    { "id": "7",  "nombre": "Red Dead Online", "precio": 19.99, "img": "img/RDonline.jpg" }
+    { id: "1",  nombre: "Red Dead Revolver", precio: 9.99, img: "/img/RD Revolver-1.jpg" },
+    { id: "2",  nombre: "Red Dead Redemption Game of the Years Edition", precio: 49.99, img: "/img/RDR UNDEAD NIGHTMARE.jpg" },
+    { id: "3",  nombre: "Red Dead Redemption", precio: 39.99, img: "/img/RDR.jpg" },
+    { id: "4",  nombre: "Red Dead Redemption Undead Nightmare (Extention)", precio: 19.99, img: "/img/UNDEAD NIGHTMARE.jpg" },
+    { id: "5",  nombre: "Red Dead Redemption II Ultimate Edition", precio: 99.99, img: "/img/RDR2 ULTIMATE EDITION.jpg" },
+    { id: "6",  nombre: "Red Dead Redemption II", precio: 59.99, img: "/img/RDR2.jpg" },
+    { id: "7",  nombre: "Red Dead Online", precio: 19.99, img: "/img/RDonline.jpg" }
 ];

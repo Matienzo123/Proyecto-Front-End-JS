@@ -1,4 +1,4 @@
-import { productos } from './productos.js';
+// import { productos } from './productos.js';
 import { agregarProducto } from './funcionesCarrito.js';
 import { obtenerCarrito } from './storage.js';
 import { actualizarContador } from './ui.js';
@@ -9,7 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const carrito = obtenerCarrito()
     actualizarContador(carrito)
 
-    productos.forEach((producto) => {
+    fetch('./data/productos.json')
+    .then((respuesta) => {
+        if (!respuesta.ok) {
+            throw new Error(`Error HTTP status: ${respuesta.status}`);
+        }
+        return respuesta.json();
+    })
+
+    .then(data => {
+        data.forEach((producto) => {
         // Crear tarjeta de producto
         const tarjeta = document.createElement('article')
         tarjeta.classList.add('tarjeta-producto');
@@ -40,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         tarjeta.appendChild(boton)
 
         contenedor.appendChild(tarjeta)
+        });
     })
+
+    .catch((error) => {
+        console.error('Error al cargar los productos:', error);
+    });    
 
 })
